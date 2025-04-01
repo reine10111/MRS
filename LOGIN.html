@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS-Sign In</title>
+    <link rel="icon" href="FAVICON.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sign-in-section">
+            <div class="header">
+                <span class="logo">
+                    <img src="images/LOGO.png" alt="logo" class="logo">
+                </span>
+            </div>
+            <h2 class="sign-in-title">Sign In</h2>
+            <p class="sign-up-text">Don't have an account? <a class="create-account" href="SIGNUP.html">Create now</a></p>
+            <form>
+                <div class="input-group">
+                    <label class="input-label">E-mail</label>
+                    <input class="input-field" type="email" placeholder="example@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <div class="password-container">
+                        <input class="input-field" id="password" type="password" placeholder="••••••••">
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i> <!-- Eye icon -->
+                    </div>                    
+                </div>
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox" class="checkbox">
+                        <span class="remember-text">Remember me</span>
+                    </label>
+                    <a class="forgot-password" href="#">Forgot Password?</a>
+                </div>
+                <a href="USER/HOMEPAGE.html" class="sign-up-button">Sign Up</a>
+            </form>
+            <div class="or-text">
+                <span>or</span>
+            </div>
+            <button class="google-sign-in">
+                <img src="images/GOOGLE.png" alt="Google logo" class="google-logo">
+                Continue with Google
+            </button>
+        </div>
+    <div class="container-rightside">
+        <img src="images/FRONT.png" alt="Front" class="Front">
+
+        <h2 class="introducing">
+            INTRODUCING
+           </h2>
+        <p class="text-center">MRS is a streamlined maintenance 
+            request system where users can submit requests to report and 
+            track issues, maintenance staff manage repairs, and admins oversee 
+            operations through a web platform ensuring fast, efficient, and 
+            hassle-free maintenance solutions.
+        </p>
+
+    </div>
+    </div>
+    <script src="jscript.js"></script>
+</body>
+</html>

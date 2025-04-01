@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS-Sign Up</title>
+    <link rel="icon" href="images/FAVICON.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        
+        <!-- Left Section (Introduction & Image) -->
+        <div class="signup-leftside">
+            <img src="FRONT.png" alt="Front" class="Front">
+            <h2 class="introducing">INTRODUCING</h2>
+            <p class="text-center">
+                MRS is a streamlined maintenance request system where users can submit requests to report and 
+                track issues, maintenance staff manage repairs, and admins oversee operations through a web platform 
+                ensuring fast, efficient, and hassle-free maintenance solutions.
+            </p>
+        </div>
+
+        <!-- Right Section (Sign-Up Form) -->
+        <div class="signup-rightside">
+            <div class="header">
+                <span class="logo-signup">
+                    <img src="images/LOGO.png" alt="logo-signup" class="logo-signup">
+                </span>
+            </div>
+            <h2 class="sign-in-title">Sign Up</h2>
+            <p class="sign-up-text">Already have an account? <a class="create-account" href="LOGIN.html">Login</a></p>
+            
+            <form class="signup-form">
+                <div class="input-group">
+                    <label class="input-label">Name</label>
+                    <input class="input-field" type="text" placeholder="Bam Aquino">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Username</label>
+                    <input class="input-field" type="text" placeholder="@bamAqui">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">E-mail</label>
+                    <input class="input-field" type="email" placeholder="example@gmail.com">
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <div class="password-container">
+                        <input class="input-field" id="password1" type="password" placeholder="••••••••">
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('password1', this)"></i>
+                    </div>                    
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label">Confirm Password</label>
+                    <div class="password-container">
+                        <input class="input-field" id="password2" type="password" placeholder="••••••••">
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('password2', this)"></i>
+                    </div>                    
+                </div>
+
+                <div class="options">
+                    <label class="remember-me">
+                        <input type="checkbox" class="checkbox">
+                        <span class="remember-text">Remember me</span>
+                    </label>
+                    <a class="forgot-password" href="#">Forgot Password?</a>
+                </div>
+                <a href="LOGIN.html" class="sign-up-button">Sign Up</a>
+
+            </form>
+        </div>
+
+    </div>
+    
+    <script src="jscript.js"></script>
+</body>
+</html>

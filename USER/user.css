@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7fafc;
+    color: #2d3748;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+footer h1 {
+    font-size: 1rem;
+    color: #2d3748;
+    font-weight: 100;
+}
+
+/* Sidebar Styles */
+
+.bg-white {
+    background-color: white;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-gray-800 {
+    color: #2d3748;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #3182ce;
+}
+
+.nav-bar {
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: #2d3748;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a5568;
+}
+
+/* Main Content Styles */
+.flex-1 {
+    flex: 1;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.space-x-6 {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.bg-gray-900 {
+    background-color: #1a202c;
+}
+
+.text-white {
+    color: white;
+}
+
+.rounded-lg {
+    border-radius: 0.375rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.text-gray-400 {
+    color: #a0aec0;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.space-y-4 {
+    margin-bottom: 1rem;
+}
+
+.bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.text-white {
+    color: white;
+}
+
+.hover\:bg-gray-700:hover {
+    background-color: #4a5568;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.text-gray-400 {
+    color: #a0aec0;
+}
+
+/* Form and Input Styles */
+input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.375rem;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 1px #3182ce;
+}
