@@ -3,18 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRS-Generate Report</title>
+    <title>MRS-Homepage</title>
     <link rel="icon" href="../images/FAVICON.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="user.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    
+<script>
+    const submitBtn = document.getElementById('submitBtn');
+  
+    submitBtn.addEventListener('click', () => {
+      submitBtn.classList.remove('bg-gray-700');
+      submitBtn.classList.add('bg-green-600');
+      submitBtn.textContent = 'Submitted'; // Optional: change button text
+    });
+  </script>
+  
+  
+<body class="bg-gray-100 font-sans">
+    <header>
+        <div class="header">
+            <!-- You can add content here -->
+        </div>
+    </header>
+
+    <main class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/5 bg-white p-6 border-r border-black">
+          <div class="flex items-center mb-8">
+            <i class="fas fa-tools text-4xl text-gray-800"></i>
+            <a href="HOMEPAGE.html">
+              <span class="ml-4 text-2xl font-bold text-gray-800">MRS</span>
+            </a>
+          </div>
+          <nav class="space-y-4">
+            <a class="flex items-center text-gray-800 hover:text-blue-500" href="HOMEPAGE.html">
+              <i class="fas fa-home mr-3"></i> Home
+            </a>
+            <a class="flex items-center text-gray-800 hover:text-blue-500" href="ANNOUNCEMENT.html">
+              <i class="fas fa-bullhorn mr-3"></i> Announcement
+            </a>
+            <a class="flex items-center text-gray-800 hover:text-blue-500" href="PROFILE.html">
+              <i class="fas fa-user mr-3"></i> Profile
+            </a>
+          </nav>
+          <a href="GENERATE.html">
+            <button class="mt-8 w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700">
+              Generate Report
+            </button>
+          </a>
+        </div>
+
+        <div class="flex-1 p-6">
+            <div class="flex justify-center items-center mb-6">
+                <input class="w-1/2 p-2 rounded-lg border border-gray-300" placeholder="Search" type="text"/>
+            </div>
+      
+        <!-- Request Section -->
+        <div class="flex-1 flex flex-col items-center justify-center p-10 bg-gray-100">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-900">ANNOUNCEMENT GENERATION</h2>
+          <div class="bg-gray-800 text-white rounded-xl p-6 w-full max-w-4xl shadow-lg">
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Upload Section -->
+                <div class="flex flex-col items-center justify-center bg-gray-600 rounded-lg p-6 w-full md:w-1/2">
+                    <!-- Hidden file input -->
+                    <input type="file" id="fileInput" class="hidden" accept="image/*,video/*">
+                
+                    <!-- Clickable icon to trigger file input -->
+                    <button onclick="document.getElementById('fileInput').click()" class="flex items-center justify-center w-24 h-24 bg-gray-700 rounded-full focus:outline-none">
+                    <span class="text-5xl">+</span>
+                    </button>
+                
+                    <p class="mt-4 text-center text-sm">Kindly Upload Picture or Video of the Reported Issue</p>
+                </div>
+      
+              <!-- Form Section -->
+              <div class="w-full md:w-1/2 flex flex-col gap-4">
+                <input type="text" placeholder="What kind of issue would you like to report?"
+                       class="bg-gray-200 text-black p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      
+                <textarea placeholder="Write Brief Description..."
+                          class="bg-gray-200 text-black p-3 h-32 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      
+                <div class="relative">
+                  <input type="text" placeholder="Select Location"
+                         class="bg-gray-200 text-black p-3 w-full rounded-md pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <div class="absolute right-3 top-3 text-gray-600">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Submit Button -->
+            <div class="flex justify-end mt-6">
+                <button id="submitBtn" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-md transition-colors duration-300">
+                    Submit
+                  </button>
+                  
+            </div>
+          </div>
+        </div>
+      </main>
+      
+
+
+    <script src="user.js"></script>
+
+    <footer>
+        <h1>"Seamless Maintenance, Effortless Solutions."</h1>
+    </footer>
 </body>
-<footer>
-    <h1>"Seamless Maintenance, Effortless Solutions."</h1>
-</footer>
 </html>

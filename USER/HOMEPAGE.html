@@ -20,10 +20,12 @@
     <main>
         <div class="flex min-h-screen">
             <!-- Sidebar -->
-            <div class="w-1/5 bg-white p-6">
+            <div class="w-1/5 bg-white p-6 border-r border-black">
                 <div class="flex items-center mb-8">
                     <i class="fas fa-tools text-4xl text-gray-800"></i>
-                    <span class="ml-4 text-2xl font-bold text-gray-800">MRS</span>
+                    <a href="HOMEPAGE.html">
+                        <span class="ml-4 text-2xl font-bold text-gray-800">MRS</span>
+                    </a>
                 </div>
                 <nav class="space-y-4">
                     <a class="flex items-center text-gray-800 hover:text-blue-500" href="HOMEPAGE.html">
@@ -77,15 +79,16 @@
                     </div>
 
                     <!-- Announcement Section -->
-                    <div class="w-1/3" id="announcement-container">
+                    <div class="w-1/3" id="announcement-container ">
                         <h2 class="text-2xl font-bold mb-4">ANNOUNCEMENTS</h2>
                         <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-lg shadow">
+                            <!--Announcement 1-->
+                            <div class="bg-white p-4 rounded-lg shadow border border-black gap-4 mb-4">
                                 <div class="flex items-center mb-2">
                                     <span class="font-bold">@Username</span>
                                     <span class="text-gray-400 ml-2">21 Feb 2025</span>
                                 </div>
-                                <p class="font-bold mb-2">CICS Second Floor CR Under Maintenance</p>
+                                <p class="font-bold mb-2 text-yellow-900">CICS Second Floor CR Under Maintenance</p>
                                 <p class="text-gray-600 mb-4">
                                     The said comfort room will not be available for use for this day. Rest assured that the operation will continue tomorrow, thank you for your understanding. Godbless...
                                 </p>
@@ -93,7 +96,24 @@
                                     Comment
                                 </button>
                             </div>
-                            <button class="bg-gray-800 text-white py-1 px-4 rounded-lg hover:bg-gray-700 w-full">More</button>
+                            <!--Announcement 2-->
+                            <div class="bg-white p-4 rounded-lg shadow border border-black gap-4 mb-4">
+                                <div class="flex items-center mb-2">
+                                    <span class="font-bold">@Username</span>
+                                    <span class="text-gray-400 ml-2">22 Feb 2025</span>
+                                </div>
+                                <p class="font-bold mb-2 text-yellow-900">New Announcements Coming Soon!</p>
+                                <p class="text-gray-600 mb-4">
+                                    Stay tuned for more updates and announcements regarding the maintenance schedule. Thank you for your patience!
+                                </p>
+                                <button class="bg-gray-800 text-white py-1 px-4 rounded-lg hover:bg-gray-700" onclick="showCommentField(this)">
+                                    Comment
+                                </button>
+                            </div>
+                            <a href="ANNOUNCEMENT.html">
+                                <button class="bg-gray-800 text-white py-1 px-4 rounded-lg hover:bg-gray-700 w-full mt-4">More</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>
