@@ -1,20 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRS-Announcement</title>
-    <link rel="icon" href="../images/FAVICON.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="user.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRS-Announcement</title>
+  <link rel="icon" href="../images/FAVICON.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="user.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
-<body>
-    
-</body>
-<footer>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header>
+    <div class="header">
+      <!-- Optional: Add content or branding here -->
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main>
+    <div class="flex min-h-screen">
+
+      <!-- Sidebar -->
+      <div class="w-1/5 bg-white p-6 border-r border-black">
+        <div class="flex items-center mb-8">
+          <i class="fas fa-tools text-4xl text-gray-800"></i>
+          <a href="HOMEPAGE.html">
+            <span class="ml-4 text-2xl font-bold text-gray-800">MRS</span>
+          </a>
+        </div>
+        <nav class="space-y-4">
+          <a class="flex items-center text-gray-800 hover:text-blue-500" href="HOMEPAGE.html">
+            <i class="fas fa-home mr-3"></i> Home
+          </a>
+          <a class="flex items-center text-gray-800 hover:text-blue-500" href="ANNOUNCEMENT.html">
+            <i class="fas fa-bullhorn mr-3"></i> Announcement
+          </a>
+          <a class="flex items-center text-gray-800 hover:text-blue-500" href="PROFILE.html">
+            <i class="fas fa-user mr-3"></i> Profile
+          </a>
+        </nav>
+        <a href="GENERATE.html">
+          <button class="mt-8 w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700">
+            Generate Report
+          </button>
+        </a>
+      </div>
+
+      <div class="flex-1 p-6">
+        <div class="flex justify-center items-center mb-6">
+            <input class="w-1/2 p-2 rounded-lg border border-gray-300" placeholder="Search" type="text"/>
+        </div>
+
+      <!-- Main Content Area -->
+      <div class="flex justify-center items-start flex-1 py-10 px-4">
+        <!-- Announcement Section -->
+        <div class="w-full max-w-xl" id="announcement-container">
+            <h2 class="text-2xl font-bold mb-6 text-center">ANNOUNCEMENTS</h2>
+          
+            <!-- Announcement 1 -->
+            <div class="bg-white p-6 rounded-lg shadow border border-black flex justify-between items-start gap-4 mb-4">
+              <div class="flex-1">
+                <div class="flex items-center mb-2">
+                  <span class="font-bold">@Username</span>
+                </div>
+                <p class="font-bold mb-2 text-yellow-900">CICS Second Floor CR Under Maintenance</p>
+                <p class="text-gray-600">
+                  The said comfort room will not be available for use for this day. Rest assured that the operation will continue tomorrow, thank you for your understanding. Godbless...
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <span class="text-gray-400 ml-2">21 Feb 2025</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <button class="bg-gray-800 text-white py-1 px-10 rounded-lg hover:bg-gray-700 " onclick="showCommentField(this)">
+                    Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Announcement 2 -->
+            <div class="bg-white p-6 rounded-lg shadow border border-black flex justify-between items-start gap-4 mb-4">
+              <div class="flex-1">
+                <div class="flex items-center mb-2">
+                  <span class="font-bold">@Username</span>
+                </div>
+                <p class="font-bold mb-2 text-yellow-900">New Announcements Coming Soon!</p>
+                <p class="text-gray-600">
+                  Stay tuned for more updates and announcements regarding the maintenance schedule. Thank you for your patience!
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <span class="text-gray-400 ml-2">22 Feb 2025</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <button class="bg-gray-800 text-white py-1 px-10 rounded-lg hover:bg-gray-700 " onclick="showCommentField(this)">
+                    Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Announcement 3 -->
+            <div class="bg-white p-6 rounded-lg shadow border border-black flex justify-between items-start gap-4 mb-4">
+              <div class="flex-1">
+                <div class="flex items-center mb-2">
+                  <span class="font-bold">@AnotherUser</span>
+                </div>
+                <p class="font-bold mb-2 text-yellow-900">Power Interruption Notice</p>
+                <p class="text-gray-600">
+                  Please be informed that there will be a scheduled power interruption on 24 Feb 2025 from 10AM to 12NN for system upgrades.
+                </p>
+              </div>
+              <div>
+                <div class="flex items-center mb-2">
+                  <span class="text-gray-400 ml-2">23 Feb 2025</span>
+                </div>
+                <div class="flex items-center mb-2">
+                  <button class="bg-gray-800 text-white py-1 px-10 rounded-lg hover:bg-gray-700 " onclick="showCommentField(this)">
+                    Comment
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+
+             <!-- Announcement 4 -->
+             <div class="bg-white p-6 rounded-lg shadow border border-black flex justify-between items-start gap-4 mb-4">
+                <div class="flex-1">
+                  <div class="flex items-center mb-2">
+                    <span class="font-bold">@AnotherUser</span>
+                  </div>
+                  <p class="font-bold mb-2 text-yellow-900">Power Interruption Notice</p>
+                  <p class="text-gray-600">
+                    Please be informed that there will be a scheduled power interruption on 24 Feb 2025 from 10AM to 12NN for system upgrades.
+                  </p>
+                </div>
+                <div>
+                  <div class="flex items-center mb-2">
+                    <span class="text-gray-400 ml-2">24 Feb 2025</span>
+                  </div>
+                  <div class="flex items-center mb-2">
+                    <button class="bg-gray-800 text-white py-1 px-10 rounded-lg hover:bg-gray-700 " onclick="showCommentField(this)">
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+             <!-- Announcement 5 -->
+             <div class="bg-white p-6 rounded-lg shadow border border-black flex justify-between items-start gap-4 mb-4">
+                <div class="flex-1">
+                  <div class="flex items-center mb-2">
+                    <span class="font-bold">@AnotherUser</span>
+                  </div>
+                  <p class="font-bold mb-2 text-yellow-900">Power Interruption Notice</p>
+                  <p class="text-gray-600">
+                    Please be informed that there will be a scheduled power interruption on 24 Feb 2025 from 10AM to 12NN for system upgrades.
+                  </p>
+                </div>
+                <div>
+                  <div class="flex items-center mb-2">
+                    <span class="text-gray-400 ml-2">25 Feb 2025</span>
+                  </div>
+                  <div class="flex items-center mb-2">
+                    <button class="bg-gray-800 text-white py-1 px-10 rounded-lg hover:bg-gray-700 " onclick="showCommentField(this)">
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+
+      
+    </div>
+  </main>
+
+  <script src="user.js"></script>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-white text-gray-600 border-t mt-4">
     <h1>"Seamless Maintenance, Effortless Solutions."</h1>
-</footer>
+  </footer>
+</body>
 </html>
