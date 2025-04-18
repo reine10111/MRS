@@ -201,3 +201,70 @@ function toggleLike(icon) {
         icon.style.color = "red"; // Red color for liked
     }
 }
+
+
+
+function closeRequestSection() {
+    const section = document.querySelector('.request-section');
+    if (section) {
+      section.style.display = 'none';
+    }
+  }
+  
+
+
+function previewFile() {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+  
+    const filePreviewContainer = document.getElementById('filePreviewContainer');
+    const filePreview = document.getElementById('filePreview');
+    const uploadButton = document.getElementById('uploadButton');
+    const replaceButton = document.getElementById('replaceButton');
+  
+    // Reset preview if no file selected (e.g. user cancels)
+    if (!file) {
+      filePreview.innerHTML = '';
+      filePreviewContainer.classList.add('hidden');
+      uploadButton.style.display = 'flex';
+      replaceButton.style.display = 'none';
+      return;
+    }
+  
+    // Hide upload button
+    uploadButton.style.display = 'none';
+  
+    // Show container and clear old preview
+    filePreviewContainer.classList.remove('hidden');
+    filePreview.innerHTML = '';
+  
+    if (file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.alt = 'Preview Image';
+        img.className = 'preview-img';
+        filePreview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    } else if (file.type.startsWith('video/')) {
+      const video = document.createElement('video');
+      video.src = URL.createObjectURL(file);
+      video.controls = true;
+      video.style.maxWidth = '100%';
+      video.style.maxHeight = '300px';
+      filePreview.appendChild(video);
+    }
+  
+    // Show replace button
+    replaceButton.style.display = 'inline-block';
+}
+  
+
+fetch('navbar.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('navbar-container').innerHTML = data;
+})
+.catch(error => console.error('Error loading navbar:', error));

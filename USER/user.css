@@ -3,12 +3,16 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f7fafc;
     color: #2d3748;
+    
 }
 
 footer {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px;
-}
+    background-color: transparent; /* 👈 this removes any background */
+  }
+  
 
 
 
@@ -25,6 +29,8 @@ footer h1 {
 }
 
 .p-6 {
+    font-family: 'Poppins', sans-serif;
+
     padding: 1.5rem;
 }
 
@@ -90,6 +96,7 @@ button:hover {
 /* Main Content Styles */
 .flex-1 {
     flex: 1;
+    margin-left: 20%; /* Adjust this value based on your sidebar width */
 }
 
 .p-6 {
@@ -196,7 +203,186 @@ input {
 }
 
 input:focus {
+    font-family: 'Poppins', sans-serif;
+
     outline: none;
     border-color: #3182ce;
     box-shadow: 0 0 0 1px #3182ce;
+}
+
+
+
+/* Request Section Styles */
+.request-section {
+    background-color: #1a1f2e;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    max-width: 64rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem; /* or adjust to how far down you want */
+
+}
+
+@media (min-width: 768px) {
+    .request-section {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.request-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+  
+.close-btn {
+    position: absolute;
+    top: -1rem;  /* Adjust vertical position */
+    left: -10rem; /* Adjust horizontal position */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+.close-btn:hover {
+    background: none;  /* Ensures no background change on hover */
+    color: white;      /* Ensures color remains the same on hover */
+}
+  
+@media (min-width: 768px) {
+    .request-upload {
+        width: 33.333%;
+    }
+}
+
+.request-upload .upload-box {
+    background-color: #4f545f;
+    border-radius: 0.75rem;
+    width: 15rem;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-upload p {
+    color: white;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.request-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .request-details {
+        width: 66.667%;
+    }
+}
+
+.request-details input,
+.request-details select {
+    background-color: #d3d3d3;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    outline: none;
+}
+
+.request-details textarea {
+    background-color: #4f545f;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    font-size: 1.125rem;
+    color: white;
+    resize: none;
+    outline: none;
+}
+
+.request-details select {
+    appearance: none;
+    padding-right: 2.5rem;
+    font-size: 0.875rem;
+    color: #4a5568;
+}
+
+.request-details .submit-button {
+    background-color: #4f545f;
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+.request-details .submit-button:hover {
+    background-color: #3a3f4a;
+}
+
+.request-details .location-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+}
+
+/* Add styles for the preview section */
+#filePreviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #filePreview img,
+  #filePreview video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+  
+  /* Replace button styling */
+  .replace-button {
+    background-color: #4f545f;
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Move button down a bit */
+  }
+  
+  .replace-button:hover {
+    background-color: #3a3f4a;
+  }
+  
+.H3 {
+    color: #201F32;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem; /* Adjust this value as needed */
 }
