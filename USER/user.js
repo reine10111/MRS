@@ -268,3 +268,125 @@ fetch('navbar.html')
     document.getElementById('navbar-container').innerHTML = data;
 })
 .catch(error => console.error('Error loading navbar:', error));
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select the action content button and the request history wrapper
+    const actionContent = document.querySelector('.action-content');
+    const historyWrapper = document.getElementById('requestHistoryWrapper');
+
+    // Add click event listener to the action content button
+    actionContent.addEventListener('click', function () {
+        // Toggle visibility of the request history wrapper
+        const currentDisplay = window.getComputedStyle(historyWrapper).display;
+        if (currentDisplay === 'none') {
+            historyWrapper.style.display = 'block'; // Show the history section
+        } else {
+            historyWrapper.style.display = 'none'; // Hide the history section
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all "View Status" buttons
+    const viewStatusButtons = document.querySelectorAll('.view-status-btn');
+    const statusModal = document.getElementById('statusModal');
+    const closeStatusModal = document.getElementById('closeStatusModal');
+    const closeStatusBtn = document.getElementById('closeStatusBtn');
+    
+    // Add event listeners to all "View Status" buttons
+    viewStatusButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Show the status modal
+            statusModal.style.display = 'flex';
+            
+            // You can dynamically update the content here if needed
+            // For example, assume you want to change the status and personnel dynamically
+            const requestStatus = "Completed"; // Sample status, could be dynamic
+            const assignedPersonnel = "Jane Smith"; // Sample personnel, could be dynamic
+            const requestDetails = "The issue was resolved by the assigned personnel..."; // Sample details
+
+            // Update the modal content
+            document.getElementById('requestStatus').textContent = requestStatus;
+            document.getElementById('assignedPersonnel').textContent = assignedPersonnel;
+            document.getElementById('requestDetails').textContent = requestDetails;
+        });
+    });
+
+    // Close the status modal when the close button is clicked
+    closeStatusModal.addEventListener('click', function () {
+        statusModal.style.display = 'none';
+    });
+
+    closeStatusBtn.addEventListener('click', function () {
+        statusModal.style.display = 'none';
+    });
+
+    // Close the status modal if clicked outside of the content area
+    window.addEventListener('click', function (event) {
+        if (event.target === statusModal) {
+            statusModal.style.display = 'none';
+        }
+    });
+});
+
+
+document.getElementById('editProfileBtn').addEventListener('click', function() {
+    // Show the modal
+    document.getElementById('editProfileModal').style.display = 'flex';
+});
+
+document.getElementById('closeEditModal').addEventListener('click', function() {
+    // Close the modal
+    document.getElementById('editProfileModal').style.display = 'none';
+});
+
+// Close the modal if clicked outside the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('editProfileModal')) {
+        document.getElementById('editProfileModal').style.display = 'none';
+    }
+});
+
+// Save profile name when registering or editing the profile
+document.getElementById('saveProfileBtn').addEventListener('click', function () {
+    const profileName = document.getElementById('profileNameInput').value;
+    
+    // Save to localStorage
+    localStorage.setItem('profileName', profileName);
+
+    // Update the profile name on the page
+    document.querySelector('.profile-name').textContent = profileName;
+
+    // Optionally: show success message or feedback
+    alert('Profile saved successfully!');
+});
+
+// On page load, set the profile name if available
+document.addEventListener('DOMContentLoaded', function () {
+    const storedProfileName = localStorage.getItem('profileName');
+
+    if (storedProfileName) {
+        document.querySelector('.profile-name').textContent = storedProfileName;
+    }
+});
+
+document.getElementById('profilePicture').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // Update the profile image preview
+        const profileImg = document.querySelector('.profile-image');
+        profileImg.src = e.target.result;
+  
+        // Optionally: Store in localStorage or send to backend
+        localStorage.setItem('profileImage', e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  
+
+  
