@@ -36,6 +36,8 @@ footer h1 {
 
 .flex {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+
 }
 
 .items-center {
@@ -63,21 +65,63 @@ footer h1 {
 }
 
 nav a {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    color: #2d3748;
-    font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  color: #2d3748;
+  font-size: 1rem;
 }
 
 nav a:hover {
-    color: #7a7a8a;
+  color: #7a7a8a;
 }
 
 .nav-bar {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
+
+/* Additional styles for fixed navbar */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px; /* Set a width for the sidebar */
+  background-color: #ffffff; /* Set a background color for the sidebar */
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+/* Responsive Media Query for Small Screens */
+@media (max-width: 768px) {
+  .fixed {
+      width: 125%; /* Sidebar takes full width */
+      height: 100; /* Let it grow based on content */
+      position: relative; /* It now takes natural space in the layout */
+      top: 0;
+  }
+
+  .nav-bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0;
+  }
+
+  .nav-bar a {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.75rem; /* Optional: smaller text for 125px */
+  }
+
+  .flex-1 {
+      margin-left: 30px; /* Prevent overlap */
+      padding-left: 0.75rem; /* Equivalent to Tailwind's pl-3 */
+      padding-top: 1rem; /* Add space so content doesn't touch nav */
+  }
+}
+
 
 button {
     background-color: #2d3748;
