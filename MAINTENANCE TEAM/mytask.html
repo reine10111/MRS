@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS-ANNOUNCEMENT PAGE</title>
+    <link rel="icon" href="../images/FAVICON.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="mt.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="mt.js" defer></script>
+  </head>
+  
 <body>
-    <h2>HOHO</h2>
+  <!-- Entire page layout -->
+  <div class="flex min-h-screen">
+    <!-- Sidebar (loaded dynamically) -->
+    <div id="navbarcontainer" class="w-1/5 bg-gray-100">
+      <!-- Sidebar content (if any) -->
+    </div>
+
+    <!-- Main content -->
+    <main class="mytask">
+      <div class="task-container">
+        <!-- Left: Image -->
+        <div class="task-image">
+          <img src="../images/Rectangle 140.png" alt="Plumbing Issue">
+        </div>
+    
+        <!-- Right: Issue Details -->
+        <div class="task-details">
+          <div>
+            <h2 class="task-title">Plumbing Issue</h2>
+            <p class="task-description">*Detailed discussion of reported issue by the user*</p>
+            <p class="task-location">Location: CICS</p>
+            <p class="task-requester">
+              Requester Email Contact: 
+              <a href="mailto:l.r@g.batstate-u.edu.ph" class="task-email">l.r@g.batstate-u.edu.ph</a>
+            </p>
+          </div>
+          <button class="resolve-button">MARK AS RESOLVED</button>
+        </div>
+      </div>
+    
+      <!-- Update Section -->
+      <div class="update-section">
+        <div class="relative">
+          <textarea id="updateTextarea" placeholder="Write Update..." class="update-textarea pr-10"></textarea>
+          <button id="postUpdateButton" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+                
+        <div class="update-timeline">
+          <div class="timeline-item">
+            <p class="timeline-time">21 Feb 10:10</p>
+            <p class="timeline-description">• Request is submitted.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-time">21 Feb 13:30</p>
+            <p class="timeline-description">• A maintenance personnel is assigned.</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-time">21 Feb 13:36</p>
+            <p class="timeline-description">• In progress (a maintenance personnel is verifying the report)</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-time">24 Feb 7:32</p>
+            <p class="timeline-description">• In progress (a maintenance personnel is checking the location of the report)</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  </div>
+
+  <script src="mt.js"></script>
 </body>
 </html>

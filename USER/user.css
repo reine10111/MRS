@@ -777,4 +777,93 @@ input:focus {
   }
   
 
+/* Policy Wrapper Container */
+.policy-wrapper {
+  position: absolute;
+  top: 290px; /* same as request-history-wrapper */
+  right: 50px;
+  width: 700px;
+  background-color: #f4f4f9; /* Lighter background color for better readability */
+  padding: 2rem; /* Increased padding for better spacing */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 50;
+  color: #333; /* Darker text color for better contrast */
+}
+
+/* Policy Title */
+.policy-wrapper h4 {
+  font-size: 1.6rem; /* Larger font for the title */
+  color: #4E4D58; /* Matching the header color from the history section */
+  font-weight: bold; /* Bold title for prominence */
+  margin-bottom: 1.5rem; /* Space below the title */
+  text-align: center; /* Center align the title */
+}
+
+/* Policy Content Paragraphs */
+.policy-wrapper .policy-content p {
+  font-size: 1rem;
+  line-height: 1.6; /* Increased line height for better readability */
+  margin-bottom: 1rem; /* Space below paragraphs */
+  text-align: justify; /* Justify text for a clean look */
+}
+
+/* Policy List */
+.policy-list {
+  list-style: disc inside;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding-left: 1.5rem; /* Space between list bullets and text */
+}
+
+.policy-list li {
+  margin-bottom: 0.8rem; /* Space between list items */
+  line-height: 1.5; /* Increased line height for readability */
+}
+
+/* Ensure the overall layout looks tidy */
+.policy-wrapper .policy-content {
+  margin-top: 1rem;
+  padding-left: 1.5rem; /* Indentation for content alignment */
+  padding-right: 1.5rem;
+}
+
   
+/* About Us Wrapper */
+.aboutus-wrapper {
+  position: absolute;
+  top: 290px; /* Same as the other wrappers */
+  right: 50px;
+  width: 700px;
+  background-color: #f4f4f9; /* Light background for consistency */
+  padding: 2rem; /* Padding for spacing */
+  border-radius: 10px; /* Rounded corners for a clean look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 50;
+  color: #333; /* Dark text for contrast */
+}
+
+/* About Us Title */
+.aboutus-wrapper h4 {
+  font-size: 1.6rem; /* Larger font for the title */
+  color: #4E4D58; /* Matching the header color from other sections */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 1.5rem; /* Space below the title */
+  text-align: center; /* Center-align the title */
+}
+
+/* About Us Content Paragraphs */
+.aboutus-wrapper .aboutus-content p {
+  font-size: 1rem;
+  line-height: 1.6; /* Increased line height for readability */
+  margin-bottom: 1rem; /* Space below paragraphs */
+  text-align: justify; /* Justified text for a professional look */
+}
+
+/* Ensure the overall content alignment looks tidy */
+.aboutus-wrapper .aboutus-content {
+  margin-top: 1rem;
+  padding-left: 1.5rem; /* Indentation for content alignment */
+  padding-right: 1.5rem;
+}

@@ -482,3 +482,137 @@ nav a:hover {
     background-color: #374151; /* hover:bg-gray-700 */
   }
   
+
+.mytask {
+  flex: 1;
+  background-color: #f3f4f6; /* same as Tailwind gray-100 */
+  padding: 1.5rem; /* same as p-6 */
+  overflow-y: auto;
+  height: 100vh; /* same as h-screen */
+  display: flex;
+  flex-direction: column;
+}
+  
+/* mt.css */
+
+/* Container for task */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .task-container {
+    flex-direction: row;
+  }
+}
+
+/* Image styling */
+.task-image img {
+  border-radius: 0.5rem;
+  width: 16rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+/* Right side (details) */
+.task-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937; /* gray-800 */
+}
+
+.task-description {
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+  margin-top: 0.5rem;
+}
+
+.task-location {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 0.5rem;
+}
+
+.task-requester {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+.task-email {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+}
+
+/* Resolve Button */
+.resolve-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937; /* gray-800 */
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 9999px; /* fully rounded */
+  align-self: flex-start;
+}
+.resolve-button:hover {
+  background-color: #4E4D58; /* green-600 */
+}
+
+/* Update Section */
+.update-section {
+  margin-top: 2rem;
+}
+
+#postUpdateButton {
+  background: #4E4D58; /* blue-600 */
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+#postUpdateButton:hover {
+  background: #1f2937; /* blue-700 */
+}
+
+.update-textarea {
+  width: 100%;
+  background-color: #374151; /* gray-700 */
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  resize: none;
+}
+
+/* Timeline */
+.update-timeline {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.timeline-time {
+  font-size: 0.875rem;
+  color: #4b5563;
+  width: 8rem;
+}
+
+.timeline-description {
+  font-size: 0.875rem;
+  color: #1f2937;
+}

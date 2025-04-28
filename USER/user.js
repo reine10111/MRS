@@ -270,23 +270,40 @@ fetch('navbar.html')
 .catch(error => console.error('Error loading navbar:', error));
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Select the action content button and the request history wrapper
-    const actionContent = document.querySelector('.action-content');
-    const historyWrapper = document.getElementById('requestHistoryWrapper');
+    // Select buttons
+    const policyBtn = document.querySelector('.policy-button'); // Add your class or ID to the Policy button
+    const historyBtn = document.querySelector('.history-button'); // Add your class or ID to the History button
+    const aboutUsBtn = document.querySelector('.aboutus-button'); // Add your class or ID to the About Us button
 
-    // Add click event listener to the action content button
-    actionContent.addEventListener('click', function () {
-        // Toggle visibility of the request history wrapper
-        const currentDisplay = window.getComputedStyle(historyWrapper).display;
-        if (currentDisplay === 'none') {
-            historyWrapper.style.display = 'block'; // Show the history section
-        } else {
-            historyWrapper.style.display = 'none'; // Hide the history section
-        }
+    // Select wrappers
+    const policyWrapper = document.getElementById('policyWrapper');
+    const historyWrapper = document.getElementById('requestHistoryWrapper');
+    const aboutUsWrapper = document.getElementById('aboutUsWrapper'); // ID for About Us wrapper
+
+    // Show Policy and hide History and About Us
+    policyBtn.addEventListener('click', function () {
+        policyWrapper.classList.remove('hidden');
+        historyWrapper.style.display = 'none';
+        aboutUsWrapper.style.display = 'none';
+    });
+
+    // Show History and hide Policy and About Us
+    historyBtn.addEventListener('click', function () {
+        historyWrapper.style.display = 'block';
+        policyWrapper.classList.add('hidden');
+        aboutUsWrapper.style.display = 'none';
+    });
+
+    // Show About Us and hide Policy and History
+    aboutUsBtn.addEventListener('click', function () {
+        aboutUsWrapper.style.display = 'block';
+        policyWrapper.classList.add('hidden');
+        historyWrapper.style.display = 'none';
     });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Select all "View Status" buttons
@@ -390,3 +407,4 @@ document.getElementById('profilePicture').addEventListener('change', function (e
   
 
   
+

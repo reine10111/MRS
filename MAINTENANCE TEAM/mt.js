@@ -125,4 +125,59 @@ function showCommentField(button) {
     });
   }
   
+
+
+
+// mt.js
+
+// --- My Task Page Scripts ---
+
+// Check if we are on the My Task page
+if (window.location.pathname.includes('mytask.html')) {
   
+  // 1. Handle "Mark as Resolved" button
+  const markAsResolvedButton = document.querySelector('button');
+  
+  if (markAsResolvedButton) {
+    markAsResolvedButton.addEventListener('click', () => {
+      markAsResolvedButton.textContent = "RESOLVED";
+      markAsResolvedButton.classList.remove('bg-gray-800');
+      markAsResolvedButton.classList.add('bg-green-600');
+    });
+  }
+
+  // 2. Optional: Auto expand textarea height as user types
+  const updateTextarea = document.querySelector('textarea');
+
+  if (updateTextarea) {
+    updateTextarea.addEventListener('input', () => {
+      updateTextarea.style.height = 'auto';
+      updateTextarea.style.height = (updateTextarea.scrollHeight) + 'px';
+    });
+  }
+
+}
+
+const postButton = document.getElementById('postUpdateButton');
+const textarea = document.getElementById('updateTextarea');
+
+if (postButton && textarea) {
+  postButton.addEventListener('click', postUpdate);
+  textarea.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault(); // Prevent new line
+      postUpdate();
+    }
+  });
+}
+
+function postUpdate() {
+  const text = textarea.value.trim();
+  if (text) {
+    // --- Here you can actually "post" it. For now, just alert or log.
+    console.log("Posted Update:", text);
+    alert('Update posted: ' + text);
+    textarea.value = ''; // Clear after posting
+    textarea.style.height = 'auto'; // Reset height if needed
+  }
+}
